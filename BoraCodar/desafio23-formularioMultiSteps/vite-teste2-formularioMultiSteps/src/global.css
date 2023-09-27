@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* faz com que o border e padding nunca almentem a sua largura mas sim sim espremer o elemento dentro da caixa */
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

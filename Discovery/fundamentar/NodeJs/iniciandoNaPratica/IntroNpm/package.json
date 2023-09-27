@@ -1,0 +1,12 @@
+{
+  "name": "intronpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "Valéria Souza",
+  "license": "MIT"
+}

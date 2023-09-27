@@ -1,0 +1,76 @@
+/* A propriedade CSS box-sizing define como a largura e a altura totais de um elemento são calculadas.
+
+border-box informa ao navegador para considerar qualquer borda e preenchimento nos valores que você especificar para a largura e altura de um elemento. Se você definir a largura de um elemento para 100 pixels, esses 100 pixels incluirão qualquer borda ou preenchimento adicionado e a caixa de conteúdo encolherá para absorver essa largura extra.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* variável para cor de fundo da página */
+--bg-color: #121214;
+
+/* define cor de fundo da caixa onde contém os botões principais do temporizador */
+--base-color: 194;
+--bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+--primary-color: hsl(var(--base-color), 100%, 63%);
+
+--text-color: #FFFFFF;
+
+font-size: 62.5%;
+}
+
+body {
+  /*utiliza a a variavel --bg-color para atribuir a cor de fundo da página*/
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  /* deixa os botões com fundos padrôes dos botôes transparentes */
+background-color: transparent;
+/* retira a borda padrão dos botões */
+border: none;
+
+/* troca o cursor do mouse em lugares clicaveis de setinha para maozinha */
+cursor: pointer;
+}
+
+button svg {
+   width: clamp(3.2rem, 2rem + 12vw, 6.4rem); 
+}
+/* oculta elemetos que contém o hide como seletor, no caso oculta alguns botões */
+.hide {
+  display: none; 
+}
+
+/* pega o svg de cada botão e dentro da tag path desse svg altera a proprieda da classe fill que contém a cor padrão de cada botão para a cor atual do --primary-color*/
+.play svg path , .pause svg path, .sound-on svg path, .sound-off svg path {
+fill: var(--primary-color);
+}
+
+#timer {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+  display: flex;
+}
+
+#controls {
+  /*deixa o fundo da caixa que contém os botões levemente transparente fazendo com que fique com a mesma cor dos botões um  pouco mais suave*/
+  background-color: var(--bg-primary-light);
+display: flex;
+align-items: center;
+justify-content: center;
+/*espaçamento entre os botões*/
+ gap: 3.2rem; 
+/* arredonda as bordas da caixa que contém os botões */
+border-radius: 9999px;
+
+/* aumenta caixa que contém os botões de acordo com o tamanho da tela */
+width: clamp(10rem, 10rem + 30vw, 22.2rem);
+height: clamp(
+  8rem, 5rem + 30vw, 10.8rem);
+}

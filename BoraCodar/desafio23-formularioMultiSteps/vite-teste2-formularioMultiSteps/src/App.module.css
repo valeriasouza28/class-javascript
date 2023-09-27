@@ -1,0 +1,15 @@
+@media (max-width: 320px) {
+    html {
+        /* multiplica o valor desejado em pixels por 100 e divide por 16 que é o valor que equivale 1rem em pixels */
+        font-size: 87.5%;
+    }
+}
+
+.mainDefault {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

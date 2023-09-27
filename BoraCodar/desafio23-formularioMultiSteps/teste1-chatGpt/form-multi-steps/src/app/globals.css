@@ -1,0 +1,18 @@
+@media (max-width: 320px) {
+    html {
+        /* multiplica o valor desejado em pixels por 100 e divide por 16 que é o valor que equivale 1rem em pixels */
+        font-size: 87.5%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* faz com que o border e padding nunca almentem a sua largura mas sim sim espremer o elemento dentro da caixa */
+    box-sizing: border-box;
+}
+
+ody {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}

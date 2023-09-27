@@ -1,0 +1,179 @@
+body {
+  /* onde determinamos espaços ao redor do body que é o margin, eu também posso ter preenchimento que no caso é o padding */
+  margin: 0px;  
+  font-family: 'Open Sans', sans-serif;
+
+  background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+/* espaço ocupado na tela do dispositivo */
+  min-height: 100vh;
+}
+
+.page {
+  /* coloca uma borda ao redor da página para exemplificar 
+  border: 1px solid red;*/
+  /* largura da página */
+  width: 1000px;
+  /* espaços ao redor da página está em cima 65px, nos lados automático, e em baixo 0px */
+  margin: 0 auto;
+  padding-top: 65px;
+}
+
+nav {
+  
+  /* A propriedade abreviada do flex CSS define como um item flexível crescerá ou encolherá para caber no espaço disponível em seu contêiner flexível. */
+  display: flex;
+
+  /* define como o navegador distribui o espaço entre e ao redor dos itens de conteúdo ao longo do eixo principal */
+  justify-content: space-between;
+
+  /* centraliza elementos  */
+  align-items: center;
+
+  /* espaço entre o header e o main */
+  margin-bottom: 55px;
+}
+
+/* --- tempo de video 04:27 */
+
+/* pega a ul do header */
+ ul {
+  display: flex;
+  
+  /* retira pontinho das listas */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  /* A propriedade CSS gap define os espaços (medianizes) entre linhas e colunas. É uma abreviação de gap de   linha e gap de coluna. */
+  
+  gap: 48px; 
+}
+
+/* --- ul menu da pagina */
+ul li a {
+/* adiciona cor de texto a conteúdo da ul menu da pagina */
+  color: #1F1534;
+
+  /* para tirar o sublinhado do link */
+  text-decoration: none; 
+}
+
+ul li a{
+  opacity: 0.5;
+}
+
+ul li a:hover { 
+  /* deixa a fonte do menu escura ao posicionar o mouse em cima */
+  font-weight: bold;
+  opacity: 1; 
+ }
+
+ h1, ul { 
+  font-family: 'Mulish', sans-serif;
+
+ } 
+
+ main {
+  /* A propriedade abreviada do flex CSS define como um item flexível crescerá ou encolherá para caber no espaço disponível em seu contêiner flexível. */
+  display: flex;
+
+  /* alinha elementos do main no centro */
+  align-items: center;
+
+  /* define como o navegador distribui o espaço entre e ao redor dos itens de conteúdo ao longo do eixo principal */
+  justify-content: space-between;
+ }
+
+ h1 { 
+  /* define tamanho da font */
+  font-size: 49px;
+
+  /* define altura da font */
+  line-height: 56px; 
+
+  /* define cor  para a font */
+  color: #1F1534;
+
+/* define font do h1 como normal para que não fique todo ele em negrito */
+  font-weight: normal;
+
+  /* define tamanho da quebra de linha de um do texto do h1 */
+  width: 490px;
+ }
+
+ h1 span {
+  /* aplica cor diferente para uma parte do texto envolvida pela tag span */
+color: #89C5CC;
+
+/* deixa fonte em negrito */
+font-weight: bold;
+ }
+
+ section p {
+  /* define tamanho da fonte */
+  font-size: 14px;
+
+  /* define altura da font */
+  line-height: 28px;
+
+  /* define cor da font */
+  color: #7D7987;
+
+  /*coloca espaçamento entre o páragrafo de em cima e em baixo de 40px e na laterais de 0  */
+  margin: 40px 0;
+ }
+
+ button {
+  /* ---texto do botão */
+
+  color: white;
+  /* define font do botão para que todas as letras fiquem maiúsculas */
+  text-transform: uppercase;
+  /* define estilo da fonte para texto no botão */
+  font-family: 'Open Sans', sans-serif;
+
+/* ---alinhamento do botão */
+  /* coloca  core de fundo no botão whatsapp */
+  background: #69B99D;
+  /* retira borda do botão whatsapp */
+  border: 0;
+  padding: 14px 32px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  /* alinhamento dos items */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  /* espaçamento entre os items */
+  gap: 10px;
+  
+ }
+
+button:hover {
+  background-color: #4ea788;
+}
+
+ footer {
+  /* define tamanho da font */
+  font-size: 14px;
+
+  /* define altura da font */
+  line-height: 28px;
+
+/* alinha elementos do footer no centro */
+  text-align: center;
+/* define espaçamento do footer e do hero de 80px */
+  margin-top: 80px;
+ }
+
+ footer a {
+  color: #1F1534;
+  font-weight: bold;
+ }
+
+ #balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+ }

@@ -1,0 +1,25 @@
+{
+  "name": "calendario-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.14",
+    "date-fns": "^2.30.0",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "next": "13.4.3",
+    "postcss": "8.4.23",
+    "react": "^18.2.0",
+    "react-client": "^1.0.1",
+    "react-dom": "18.2.0",
+    "react-tailwindcss-datepicker": "^1.6.1",
+    "tailwindcss": "3.3.2",
+    "dayjs": "^1.11.6" 
+  }
+}

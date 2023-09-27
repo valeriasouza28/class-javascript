@@ -1,0 +1,57 @@
+body {
+  background-color: #0F0D13;
+}
+
+.player-main {
+  display: flex;
+  justify-content: center;
+align-items: center;
+flex-direction: column;
+
+margin: 50px 191px 20px 191px;
+
+padding-top: 66px;
+padding-bottom: 100px;
+padding-left: 191px;
+padding-right: 191px;
+
+background: #2A2141;
+
+border-radius: 9px;
+}
+
+.capa-album img {
+  border-radius: 9px;
+}
+
+.name .music{
+  font-family: Roboto;
+  font-weight: Bold;
+}
+
+.name .banda {
+  font-family: Roboto;
+  font-weight: Regular;
+}
+
+.name {
+  margin-top: 29px;
+  margin-bottom: 29px;
+  gap: 9pxs;
+  color: #E1E1E6;;
+}
+
+ .botoes {
+margin-bottom: 29px;
+gap: 50px;
+}
+
+button {
+  /* deixa os botões com fundos padrôes dos botôes transparentes */
+background-color: transparent;
+/* retira a borda padrão dos botões */
+border: none;
+
+/* troca o cursor do mouse em lugares clicaveis de setinha para maozinha */
+cursor: pointer;
+}

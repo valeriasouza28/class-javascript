@@ -1,0 +1,55 @@
+/* Resetar o cálcuçlo das caixas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .info  {
+ text-align: left
+margin-left: 70px;
+color: white;
+} */
+
+/* Seleciona font para todo o conteúdo do body */
+body * {
+  font-family: 'Roboto';
+}
+
+/* O height é para  entender o que será preenchido*/
+body{
+  /* imagem degradê das cores de fundo */
+  background: linear-gradient(150deg, 
+  #0F2B05 4.34%,
+  #000000);
+  height:100vh;
+
+  /* alinhar elementos com propriedade de textos  no caos a logo*/
+  text-align: center;
+}
+
+header {
+  padding: 75px 0px;
+  
+}
+
+.card {
+  /* alinhar cartão no centro da página */
+  display: inline-block;
+  width: 354px;
+  height: 508px;
+  
+  background-image: url('./assets/bg_explorer.svg');
+  
+}
+
+.card > img {
+width: 150px;
+height: 150px;
+/* concerta imagem caso não tenha vindo do gitHub */
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid  #F7DD43;
+
+/* margin-top: 100px; */
+  /* margin-bottom:110px; */
+}

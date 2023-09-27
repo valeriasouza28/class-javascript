@@ -1,0 +1,76 @@
+/* coloca estilo de font em body a font Open Sans */
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  /* centralizatodos os textos que está no body */
+  text-align: center;
+  margin: 0px;
+}
+
+#hero {
+  /* determina a largura da caixa em que está o  body */
+  width: 592px;
+  /* para se ajustar automaticamente a tela recuperando o alinhamento central trago peo text-align: center;e após isso foi aplicado espaçamento do topo, laterais e do hero ao próximo elemento que é footer */
+  margin: 0 auto 72px;
+}
+hero img {
+  /* determina espaçamento em relação ao elemento inferior */
+  margin-bottom: 72px;
+}
+
+/* coloca estilo de font em h1 a font Inter */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 49px;
+  /* altura da linha */
+  line-height: 56px;
+  /* muda a font padrão de bold que é negrito para normal */
+  font-weight: normal;
+
+  margin-bottom: 32px;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+/* coloca a cor as partes do texto envolvidas com as tags span e a */
+span, a {
+  color: #FF9900;
+
+}
+
+/* coloca a cor as partes do texto envolvidas com as tags p */
+p, #footer {
+  color: #7D7987;
+  font-size: 14px;
+  line-height:28px;
+}
+
+#footer {
+  margin-bottom: 33px;
+}
+
+/* lendo de trás para frente pegue um a que anterior a ele tenha um a deixando um espaçamento entre os links */
+#footer a + a {
+  margin-left: 28px;
+
+}
+
+#line {
+  width: 568px;
+  height: 0px; 
+  /* faz alinhamento da linha horizontal onde le tem zero de altura, as latererais é automático, 8px em relaçãp aos links */
+  margin: 0 auto 8px;
+  /* adciona linha horizontal acima dos links */
+  border: 1px solid #ECEFF2;
+}
+
+#balls {
+  /* posiciona elemento de fixa na tela  */
+  position: fixed;
+  /* coloca elemento no final da página */
+  bottom: 0px;
+  /* coloca elemento no canto inferior direito da página */
+  right: 0px;
+}

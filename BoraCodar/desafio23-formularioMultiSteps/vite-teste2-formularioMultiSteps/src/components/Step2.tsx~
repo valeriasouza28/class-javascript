@@ -1,0 +1,167 @@
+import styles from './Step2.module.css'
+import '../fonts.css';
+import step2 from '../assets/step2-purple.svg'
+// import step1 from '../assets/stepCompleted.svg'
+import step3 from '../assets/step3gray.svg'
+import arrowRight from '../assets/arrowRight.svg'
+import stepCompleted from '../assets/stepCompleted.svg'
+import { Link } from 'react-router-dom';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
+
+
+export function Step2() {
+
+  const [companyName, setCompanyName] = useState(['']);
+
+  const [newCompanyNameText, setNewCompanyNameText] = useState('');
+
+  function handleCreateNewCompanyName(event: FormEvent) {
+    event.preventDefault()
+
+    setCompanyName([...companyName, newCompanyNameText]);
+    setNewCompanyNameText('');
+  }
+
+  function handleNewCompanyNameChange(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity('');
+    setNewCompanyNameText(event.target.value);
+  }
+
+  function handleNewCompanyNameInvalid(event: InvalidEvent<HTMLInputElement>) {
+    event.target.setCustomValidity('Esse campo é obrigatório!');
+  }
+
+  const isNewCompanyNameEmpty = newCompanyNameText.length === 0;
+
+  const [numberOfEmployees, setNumberOfEmployees] = useState(['']);
+
+  const [newNumberOfEmployeesText, setNewNumberOfEmployeesText] = useState('');
+
+  function handleCreateNewNumberOfEmployees(event: ChangeEvent<HTMLInputElement>) {
+    event.preventDefault();
+
+    setNumberOfEmployees([...numberOfEmployees, newNumberOfEmployeesText]);
+    setNewNumberOfEmployeesText('');
+  }
+
+  function handleNewNumberOfEmployeesChange(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity('');
+    setNewNumberOfEmployeesText(event.target.value);
+  }
+
+  function handleNewNumberOfEmployeesInvalid(event: ChangeEvent<HTMLInputElement>) {
+    event.target.setCustomValidity('Esse campo é obrigatório!');
+  }
+
+  const isNewNumberOfEmployeesEmpty = newNumberOfEmployeesText.length === 0
+
+  const [aboutYourBuusiness, setAboutYourBuusiness] = useState(['']);
+const [newAboutYourBuusinessText, setNewAboutYourBuusinessText] = useState('');
+
+function handleCreateNewAboutYourBuusiness(event: ChangeEvent<HTMLInputElement>) {
+  event.preventDefault();
+
+  setAboutYourBuusiness([...aboutYourBuusiness, newAboutYourBuusinessText]);
+  setNewAboutYourBuusinessText('');
+}
+
+function handleNewAboutYourBuusinessChange(event: ChangeEvent<HTMLInputElement>) {
+  event.target.setCustomValidity('');
+  setNewAboutYourBuusinessText(event.target.value);
+}
+
+function handleNewAboutYourBuusinessInvalid(event: ChangeEvent<HTMLInputElement>) {
+  event.target.setCustomValidity('Esse campo é obrigatório!');
+}
+
+const isNewAboutYourBuusinessEmpty = newAboutYourBuusinessText.length === 0;
+
+let IsInputsEmpty = false;
+const arrayWithAllIsInputsEmpty = [isNewCompanyNameEmpty, isNewNumberOfEmployeesEmpty, isNewAboutYourBuusinessEmpty];
+
+const isEmpty = () => {
+  arrayWithAllIsInputsEmpty.forEach((element) => {
+    if (element === true) {
+      IsInputsEmpty = true;
+    }
+  });
+  return IsInputsEmpty 
+}
+  
+
+
+  return (
+    <div className={styles.main2} >
+      <div className={styles.cardMain2}>
+        <div className={styles.header2}>
+          
+              <div className={styles.contatoStep2}>
+                
+                <img src={stepCompleted} alt="completed" />
+                <p className={styles.textContato2}>Contato</p>
+                <img className={styles.iconArrow} src={arrowRight} alt="seta para direita" />
+              </div>
+
+              <div className={styles.empresaStep2}>
+                <img src={step2} alt="numero 2" />
+
+              <p className={styles.textEmpresa2}>Empresa</p>
+              <img className={styles.iconArrow} src={arrowRight} alt="seta para direita" />
+              </div>
+
+            <div className={styles.projeto2}>
+              <img src={step3} alt="numero 3" />
+              <p className={styles.textProjeto2}>Projeto</p>
+            </div>
+          </div>
+          <hr />
+          <form>
+            <div className={styles.ContainerForm}>
+              <div className={styles.formCompanyName}>
+                <label className={styles.labelCompanyName} htmlFor="companyName">Nome da empresa:</label>
+                <input className={styles.inputCompanyName} type="text" id="companyName" onChange={handleNewCompanyNameChange}
+                    onInvalid={handleNewCompanyNameInvalid}
+                    required />
+              </div>
+              <div className={styles.formNumberOfEmployees}>
+                <label className={styles.labelNumberOfEmployees} htmlFor="NumberOfEmployees">Número de funcionários:</label>
+                <input className={styles.inputNumberOfEmployees} type="number" id="numberOfEmployees" onChange={handleNewNumberOfEmployeesChange}
+                    onInvalid={handleNewNumberOfEmployeesInvalid}
+                    required />
+              </div>
+              <div className={styles.formAboutYourBuusiness}>
+                <label className={styles.labelAboutYourBuusiness} htmlFor="aboutYourBuusiness">Sobre seu negócio</label>
+                <input className={styles.inputAboutYourBuusiness} type="text" id="aboutYourBuusiness" onChange={handleNewAboutYourBuusinessChange}
+                    onInvalid={handleNewAboutYourBuusinessInvalid}
+                    required />
+              </div>
+            </div>
+          </form>
+
+        <div className={styles.btnDownContainer}>
+
+      
+
+          <div className={styles.backBtnContainer}>
+          <Link to="/">
+            <button className={styles.btnBack} >Voltar</button>
+            </Link>
+
+          </div>
+      
+          
+          <div className={styles.NextBtnContainer}>
+          <Link to="/step2/step3">
+            <button className={styles.btnNext} disabled={isEmpty()}>Continuar</button>
+            </Link>
+
+            </div>
+        </div>
+
+        </div>
+      </div>
+    
+  );
+}
+
+ 
